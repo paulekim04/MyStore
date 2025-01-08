@@ -4,7 +4,7 @@ using MyStore.Application.Products.Queries;
 
 namespace MyStoreApi.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/products")]
 [ApiController]
 public class ProductsController(IMediator mediator) : ControllerBase
 {

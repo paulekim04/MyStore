@@ -4,7 +4,7 @@ using MyStore.Application.Orders.Queries;
 
 namespace MyStoreApi.Controllers;
 
-[Route("api/[controller]")]
+[Route("api/orders")]
 [ApiController]
 public class OrdersController(IMediator mediator) : ControllerBase
 {
