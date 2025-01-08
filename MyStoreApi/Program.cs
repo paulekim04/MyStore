@@ -1,10 +1,12 @@
 using MyStore.Infrastructure.Extensions;
+using MyStore.Application.Extensions;
 using MyStoreApi.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.AddPresentation();
+builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

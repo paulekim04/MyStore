@@ -1,7 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using MyStore.Domain.Repositories;
 using MyStore.Infrastructure.Persistence;
+using MyStore.Infrastructure.Repositories;
 
 namespace MyStore.Infrastructure.Extensions;
 
@@ -13,5 +15,7 @@ public static class ServiceCollectionExtension
         services.AddDbContext<MyStoreDbContext>(options =>
             options.UseSqlServer(connectionString)
         );
+
+        services.AddScoped<IProductsRepository, ProductsRepository>();
     }
 }
