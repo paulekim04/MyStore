@@ -31,7 +31,7 @@ internal class MyStoreDbContext(DbContextOptions<MyStoreDbContext> options) : Db
             .HasForeignKey(i => i.JobDataId);
 
         modelBuilder.Entity<JobData>()
-           .HasKey(i => i.Id);
+           .HasKey(j => j.Id);
 
         modelBuilder.Entity<Order>()
            .HasKey(i => i.Id);

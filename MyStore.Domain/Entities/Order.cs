@@ -9,6 +9,6 @@ public class Order
     public int CompanyId { get; set; }
     public bool Validated { get; set; }
     public DateTime Created { get; set; }
-    public DateTime Completed { get; set; }
+    public DateTime? Completed { get; set; }
     public IEnumerable<Item> Items { get; set; }
 }
